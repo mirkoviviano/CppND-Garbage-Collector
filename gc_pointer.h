@@ -127,6 +127,7 @@ Pointer<T, size>::Pointer(T *t) {
 
   p = findPtrInfo(addr);
   p->refcount++;
+  delete t;
 }
 
 // Copy constructor.
@@ -200,7 +201,7 @@ T *Pointer<T, size>::operator=(T *t) {
 
   p = findPtrInfo(addr);
   p->refcount++;
-
+  delete t;
   return addr;
 }
 
