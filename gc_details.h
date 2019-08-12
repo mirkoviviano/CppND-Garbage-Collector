@@ -15,10 +15,11 @@ class PtrDetails{
     // If this is an array, then size specifies
     // the size of the array.
 
-    PtrDetails(T *mPtr, unsigned size = 0)
+    PtrDetails(T *mPtr, unsigned size = 0){
+        // TODO: Implement PtrDetails
         refcount = 1;
         memPtr = mPtr;
-        isArray = size > 0;
+        isArray = size>0;
         arraySize = size;
     }
 };
